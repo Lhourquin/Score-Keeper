@@ -11,11 +11,14 @@ let counterPlayer2 = document.getElementsByClassName('counterPlayer2');
 
 function addScore() {
 
-   /* if(input.value = ""){
-        return null; 
-    }/*else{
-        let num = document.createElement('p');
-        num.textContent = input.value;
-        score.replaceWith(num);
-}*/
+
+   //     score.textContent = input.value;
+     //   score.replaceWith(num);
+
+}
+
+function resetScore() {
+    let replace = document.createElement('div');
+    replace.textContent = 10;
+    score.replaceWith(replace);
 }
