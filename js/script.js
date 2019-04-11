@@ -3,14 +3,16 @@
 let input = document.getElementsByTagName('input')[0];
 let submit = document.getElementsByTagName('input')[1];
 let score = document.getElementsByTagName('div')[0];
-let reset = document.getElementsByClassName('reset');
-let player1 = document.getElementsByClassName('player1');
-let player2 = document.getElementsByClassName('player2');
-let counterPlayer1 = document.getElementsByClassName('counterPlayer1');
-let counterPlayer2 = document.getElementsByClassName('counterPlayer2');
-let replace = document.createElement('div');
+let reset = document.getElementsByTagName('button')[0];
+let player1 = document.getElementsByTagName('button')[1];
+let player2 = document.getElementsBytagName('button')[2];
+let counterPlayer1 = document.getElementsByTagName('div')[1];
+let counterPlayer2 = document.getElementsByTagName('div')[2];
+//let replace = document.createElement('div');
 
-function addScore() {
+
+
+/*function addScore() {
         if(input.value = ""){
         return null;
         }else {
@@ -29,4 +31,4 @@ function resetScore() {
     
     replace.textContent = 5;
     score.replaceWith(replace);
-}
+}*/
