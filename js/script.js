@@ -8,17 +8,25 @@ let player1 = document.getElementsByClassName('player1');
 let player2 = document.getElementsByClassName('player2');
 let counterPlayer1 = document.getElementsByClassName('counterPlayer1');
 let counterPlayer2 = document.getElementsByClassName('counterPlayer2');
+let replace = document.createElement('div');
 
 function addScore() {
-
-
-   //     score.textContent = input.value;
-     //   score.replaceWith(num);
+        if(input.value = ""){
+        return null;
+        }else {
+        replace.textContent = input.value;
+        score.replaceWith(replace);
+        }
+        deleteInputContent();
 
 }
 
+function deleteInputContent() {
+    input.value = "";
+}
+
 function resetScore() {
-    let replace = document.createElement('div');
-    replace.textContent = 10;
+    
+    replace.textContent = 5;
     score.replaceWith(replace);
 }
