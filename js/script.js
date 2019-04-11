@@ -7,13 +7,24 @@ const player2 = document.getElementsByTagName('input')[3];
 const counter1 = document.getElementsByTagName('div')[0];
 const counter2 = document.getElementsByTagName('div')[1];
 const count= document.getElementsByTagName('div')[2];
-let value;
+let value1;
+let divCounter = document.createElement('div');
 
-player1.addEventListener ('click', function (event){
-    player1.value++;
-});
 
 function addCounter1() {
-/* lier l'incrementation et le replace with pour lajouter dans la div en mm temps que j'incrémente*/
+    value1 = player1.value++;
+    value1++;
+    divCounter.textContent = value1;
+    counter1.replaceWith(divCounter);
+    
+}
 
+player1.onclick = addCounter1;
+player2.onclick = addCounter2;
+
+function addCounter2() {
+    value1 = player2.value++;
+    value1++;
+    divCounter.textContent = value1;
+    counter2.replaceWith(divCounter);
 }
