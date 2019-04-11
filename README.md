@@ -1,0 +1,2 @@
+# Score-Keeper
+## Exercice en JS natif ou je dois avoirs 2 compteurs (joueur 1/joueur 2), chaque clique doit incrémenter le scorecorrespondant, arriver au max il devient vert et stop l'incrémentation, l'input doit fixer un score max (5 par défaut mais peut être modifier), il y avoir un bouton reset pour tout remettre à 0.
