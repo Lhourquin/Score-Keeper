@@ -15,9 +15,9 @@ let divScore = score.cloneNode(true);
 
 function addCounter1() {
     
-    if(player1.value == max || player2.value == max){
+    if (player1.value == max || player2.value == max){
     return;
-    }else{
+    } else{
     value = player1.value++;
     value++;
     divCounter1.textContent = value;
@@ -27,9 +27,10 @@ function addCounter1() {
 }
 
 function addCounter2() {
-    if(player2.value == max || player1.value == max){
+    
+    if (player2.value == max || player1.value == max){
     return;
-    }else{
+    } else{
     value = player2.value++;
     value++;
     divCounter2.textContent = value;
@@ -39,6 +40,7 @@ function addCounter2() {
 }
 
 function addScore() {
+    
     max = field.value;;
     value = max;
     divScore.textContent = value;
@@ -48,18 +50,15 @@ function addScore() {
 
 field.addEventListener('keyup', function (event){
      
-    if(event.keyCode === 13){
+    if (event.keyCode === 13){
         addScore();
         resetScore();
     }
-
 });
 
 function resetScore() {
 
-
-
-    if(player1.value == max || player2.value == max){
+    if (player1.value == max || player2.value == max){
     max = 5;
     divScore.textContent = max;
     divScore.replaceWith(divScore);
@@ -71,19 +70,19 @@ function resetScore() {
     divCounter1.replaceWith(divCounter1);
     divCounter2.textContent = value;
     divCounter2.replaceWith(divCounter2);
-    } else if(event.keyCode === 13){
-      max = field.value;
-      divScore.textContent = max;
-      divScore.replaceWith(divScore);
-      value = 0;
-      player1.value = value;
-      player2.value = value;
-      divCounter1.textContent = value;
-      divCounter1.replaceWith(divCounter1);
-      divCounter2.textContent = value;
-      divCounter2.replaceWith(divCounter2);
-    } else if(field.value > 5 || field.value < 5){
-        max = 5;
+    }else if (event.keyCode === 13){
+    max = field.value;
+    divScore.textContent = max;
+    divScore.replaceWith(divScore);
+    value = 0;
+    player1.value = value;
+    player2.value = value;
+    divCounter1.textContent = value;
+    divCounter1.replaceWith(divCounter1);
+    divCounter2.textContent = value;
+    divCounter2.replaceWith(divCounter2);
+    }else if (field.value > 5 || field.value < 5){
+    max = 5;
     divScore.textContent = max;
     divScore.replaceWith(divScore);
     value = 0;
@@ -94,7 +93,7 @@ function resetScore() {
     divCounter1.replaceWith(divCounter1);
     divCounter2.textContent = value;
     divCounter2.replaceWith(divCounter2);
-    }
+    } 
 }
 
 player1.onclick = addCounter1;
