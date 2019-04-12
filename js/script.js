@@ -40,13 +40,20 @@ function addCounter2() {
 
 
 
-/*function resetScore() {
-
+function addScore() {
+    max = field.value;;
     value = max;
     divScore.textContent = value;
     score.replaceWith(divScore);
+}
 
-}*/
+field.addEventListener('keyup', function (event){
+     
+    if(event.keyCode === 13){
+        addScore();
+    }
+
+});
 
 player1.onclick = addCounter1;
 player2.onclick = addCounter2;
