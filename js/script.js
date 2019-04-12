@@ -53,7 +53,7 @@ field.addEventListener('keyup', function (event){
     if (event.keyCode === 13){
         addScore();
         resetScore();
-    }else {
+    } else if (event.keyCode === 69) {
     return;
     }
 });
