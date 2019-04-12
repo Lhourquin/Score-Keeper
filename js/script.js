@@ -16,9 +16,9 @@ function addCounter1() {
     value = player1.value++;
     value++;
     divCounter1.textContent = value;
-   do{ counter1.replaceWith(divCounter1);
-    divCounter1.replaceWith(divCounter1);
-   }while ( divCounter1 != score.value); 
+    counter1.replaceWith(divCounter1);
+    divCounter1.replaceWith(divCounter1); 
+    stopIncrement();
 }
 
 function addCounter2() {
@@ -27,6 +27,11 @@ function addCounter2() {
     divCounter2.textContent = value;
     counter2.replaceWith(divCounter2);
     divCounter2.replaceWith(divCounter2);
+    stopIncrement();
+}
+
+function stopIncrement() {
+    console.log( (player1.value == field.value && player2.value == field.value)? true : false);
 }
 
 /*function resetScore() {
