@@ -38,22 +38,53 @@ function addCounter2() {
     }
 }
 
-
-
 function addScore() {
     max = field.value;;
     value = max;
     divScore.textContent = value;
     score.replaceWith(divScore);
+    
 }
 
 field.addEventListener('keyup', function (event){
      
     if(event.keyCode === 13){
         addScore();
+        resetScore();
     }
 
 });
 
+function resetScore() {
+
+
+
+    if(player1.value == max || player2.value == max){
+    max = 5;
+    divScore.textContent = max;
+    divScore.replaceWith(divScore);
+    value = 0;
+    field.value = max;
+    player1.value = value;
+    player2.value = value;
+    divCounter1.textContent = value;
+    divCounter1.replaceWith(divCounter1);
+    divCounter2.textContent = value;
+    divCounter2.replaceWith(divCounter2);
+    } /*else{
+        max = field.value;
+        divScore.textContent = max;
+        divScore.replaceWith(divScore);
+        value = 0;
+        player1.value = value;
+        player2.value = value;
+        divCounter1.textContent = value;
+        divCounter1.replaceWith(divCounter1);
+        divCounter2.textContent = value;
+        divCounter2.replaceWith(divCounter2);
+    }*/
+}
+
 player1.onclick = addCounter1;
 player2.onclick = addCounter2;
+reset.onclick = resetScore;
