@@ -71,18 +71,30 @@ function resetScore() {
     divCounter1.replaceWith(divCounter1);
     divCounter2.textContent = value;
     divCounter2.replaceWith(divCounter2);
-    } /*else{
-        max = field.value;
-        divScore.textContent = max;
-        divScore.replaceWith(divScore);
-        value = 0;
-        player1.value = value;
-        player2.value = value;
-        divCounter1.textContent = value;
-        divCounter1.replaceWith(divCounter1);
-        divCounter2.textContent = value;
-        divCounter2.replaceWith(divCounter2);
-    }*/
+    } else if(event.keyCode === 13){
+      max = field.value;
+      divScore.textContent = max;
+      divScore.replaceWith(divScore);
+      value = 0;
+      player1.value = value;
+      player2.value = value;
+      divCounter1.textContent = value;
+      divCounter1.replaceWith(divCounter1);
+      divCounter2.textContent = value;
+      divCounter2.replaceWith(divCounter2);
+    } else if(field.value > 5 || field.value < 5){
+        max = 5;
+    divScore.textContent = max;
+    divScore.replaceWith(divScore);
+    value = 0;
+    field.value = max;
+    player1.value = value;
+    player2.value = value;
+    divCounter1.textContent = value;
+    divCounter1.replaceWith(divCounter1);
+    divCounter2.textContent = value;
+    divCounter2.replaceWith(divCounter2);
+    }
 }
 
 player1.onclick = addCounter1;
