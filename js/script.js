@@ -58,9 +58,10 @@ function addScore() {
     max = field.value;
     max++;
     max--;
+    
     if(max < 0){
     return;
-    } else{
+    }else{    
     divScore.textContent = max;
     score.replaceWith(divScore);
     }
