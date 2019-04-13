@@ -82,6 +82,7 @@ function resetScore() {
     if (player1.value == max || player2.value == max){
     max = 0;
     divScore.textContent = max;
+    score.replaceWith(divScore);
     divScore.replaceWith(divScore);
     value = 0;
     field.value = max;
