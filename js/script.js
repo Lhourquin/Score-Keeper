@@ -15,9 +15,10 @@ let divScore = score.cloneNode(true);
 
 function addCounter1() {
     
-    if (player1.value == max || player2.value == max){
+    if (player1.value == max || player2.value == max || max < 0){
     return;
     } else{
+
     value = player1.value++;
     value++;
     divCounter1.textContent = value;
@@ -29,7 +30,7 @@ function addCounter1() {
 
 function addCounter2() {
     
-    if (player2.value == max || player1.value == max){
+    if (player2.value == max || player1.value == max || max < 0){
     return;
     } else{
     value = player2.value++;
@@ -54,11 +55,15 @@ function colorScore() {
 
 function addScore() {
     
-    max = field.value;;
-    value = max;
-    divScore.textContent = value;
+    max = field.value;
+    max++;
+    max--;
+    if(max < 0){
+    return;
+    } else{
+    divScore.textContent = max;
     score.replaceWith(divScore);
-    
+    }
 }
 
 field.addEventListener('keyup', function (event){
@@ -100,7 +105,7 @@ function resetScore() {
     divCounter1.replaceWith(divCounter1);
     divCounter2.textContent = value;
     divCounter2.replaceWith(divCounter2);
-    } else if (field.value > 0){
+    } else if (field.value > 0 || field.value < 0){
     max = 0;
     divScore.textContent = max;
     score.replaceWith(divScore);
@@ -121,3 +126,4 @@ function resetScore() {
 player1.onclick = addCounter1;
 player2.onclick = addCounter2;
 reset.onclick = resetScore;
+field.onclick = addScore;
