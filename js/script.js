@@ -71,7 +71,9 @@ function addScore() {
     divCounter2.textContent = value;
     counter2.replaceWith(divCounter2);
     divCounter2.replaceWith(divCounter2);
-    }else{    
+    divCounter1.style.color = 'black';
+    divCounter2.style.color = 'black';
+    max = field.value;
     divScore.textContent = max;
     score.replaceWith(divScore);
     }
