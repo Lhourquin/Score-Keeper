@@ -23,6 +23,7 @@ function addCounter1() {
     divCounter1.textContent = value;
     counter1.replaceWith(divCounter1);
     divCounter1.replaceWith(divCounter1); 
+    colorScore();
     }
 }
 
@@ -36,6 +37,18 @@ function addCounter2() {
     divCounter2.textContent = value;
     counter2.replaceWith(divCounter2);
     divCounter2.replaceWith(divCounter2);
+    colorScore();
+    }
+}
+
+function colorScore() {
+
+    if (player1.value == max){
+    divCounter1.style.color = 'green';
+    divCounter2.style.color = 'red';
+    } else if(player2.value == max){
+    divCounter2.style.color = 'green';
+    divCounter1.style.color = 'red';
     }
 }
 
@@ -68,6 +81,8 @@ function resetScore() {
     field.value = max;
     player1.value = value;
     player2.value = value;
+    divCounter1.style.color = 'black';
+    divCounter2.style.color = 'black';
     divCounter1.textContent = value;
     divCounter1.replaceWith(divCounter1);
     divCounter2.textContent = value;
@@ -79,6 +94,8 @@ function resetScore() {
     value = 0;
     player1.value = value;
     player2.value = value;
+    divCounter1.style.color = 'black';
+    divCounter2.style.color = 'black';
     divCounter1.textContent = value;
     divCounter1.replaceWith(divCounter1);
     divCounter2.textContent = value;
@@ -91,6 +108,8 @@ function resetScore() {
     field.value = max;
     player1.value = value;
     player2.value = value;
+    divCounter1.style.color = 'black';
+    divCounter2.style.color = 'black';
     divCounter1.textContent = value;
     divCounter1.replaceWith(divCounter1);
     divCounter2.textContent = value;
