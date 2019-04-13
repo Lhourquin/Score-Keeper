@@ -61,6 +61,16 @@ function addScore() {
     
     if(max < 0){
     return;
+    }else if ( max++ || max--){
+    value = 0;
+    player1.value = value;
+    player2.value = value;
+    divCounter1.textContent = value;
+    counter1.replaceWith(divCounter1);
+    divCounter1.replaceWith(divCounter1);
+    divCounter2.textContent = value;
+    counter2.replaceWith(divCounter2);
+    divCounter2.replaceWith(divCounter2);
     }else{    
     divScore.textContent = max;
     score.replaceWith(divScore);
