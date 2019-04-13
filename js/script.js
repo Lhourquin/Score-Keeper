@@ -74,7 +74,7 @@ field.addEventListener('keyup', function (event){
 function resetScore() {
 
     if (player1.value == max || player2.value == max){
-    max = 5;
+    max = 0;
     divScore.textContent = max;
     divScore.replaceWith(divScore);
     value = 0;
@@ -100,9 +100,10 @@ function resetScore() {
     divCounter1.replaceWith(divCounter1);
     divCounter2.textContent = value;
     divCounter2.replaceWith(divCounter2);
-    }else if (field.value > 5 || field.value < 5){
-    max = 5;
+    } else if (field.value > 0){
+    max = 0;
     divScore.textContent = max;
+    score.replaceWith(divScore);
     divScore.replaceWith(divScore);
     value = 0;
     field.value = max;
