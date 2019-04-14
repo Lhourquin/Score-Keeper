@@ -59,7 +59,7 @@ function addScore() {
     max++;
     max--;
     
-    if(max < 0){
+    if(max < 0 || field.value == ""){
     return;
     }else if ( max++ || max--){
     value = 0;
